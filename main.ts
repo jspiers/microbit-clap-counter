@@ -1,5 +1,10 @@
-let count: number = 0
 input.onSound(DetectedSound.Quiet, function () {
     led.toggle(count / 5, count % 5)
-    count = (count + 1) % 25
+    if (count == 24) {
+        count = 0
+    } else {
+        count += 1
+    }
 })
+let count = 0
+count = 0
